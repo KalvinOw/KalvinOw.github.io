@@ -69,7 +69,7 @@ a:active {
                 win.document.body.style.margin = '0';
                 win.document.body.style.height = '100vh';
                 
-                var iframe = win.document.createElement('iframe');
+                var iframe1 = win.document.createElement('iframe');
                 iframe.style.border = 'none';
                 iframe.style.width = '100%';
                 iframe.style.height = '100%';
@@ -87,28 +87,28 @@ a:active {
 <body>
   <button onclick="openFullscreen();">Unblocker</button>
 <script>
-    var urlObj = new window.URL(window.location.href);
-    var url = "https://us1.noblo.cc/";
+    var urlObj1 = new window.URL(window.location.href);
+    var url1 = "https://us1.noblo.cc/";
 
-    if (url) {
-          var win;
+    if (url1) {
+          var win1;
 
       document.querySelector('button').onclick = function() {
-            if (win) {
-                win.focus();
+            if (win1) {
+                win1.focus();
             }
             else {
-                win = window.open();
-                win.document.body.style.margin = '0';
-                win.document.body.style.height = '100vh';
+                win1 = window.open();
+                win1.document.body.style.margin = '0';
+                win1.document.body.style.height = '100vh';
                 
-                var iframe = win.document.createElement('iframe');
-                iframe.style.border = 'none';
-                iframe.style.width = '100%';
-                iframe.style.height = '100%';
-                iframe.style.margin = '0';
-                iframe.src = url;
-                win.document.body.appendChild(iframe);
+                var iframe1 = win1.document.createElement('iframe');
+                iframe1.style.border = 'none';
+                iframe1.style.width = '100%';
+                iframe1.style.height = '100%';
+                iframe1.style.margin = '0';
+                iframe1.src = url1;
+                win1.document.body.appendChild(iframe);
                 
             }
             document.querySelector('button').style.background='#ff5148';
