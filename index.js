@@ -5,7 +5,7 @@ const path = require('path')//Include the Path module
 
 //Set up the Express router
 router.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, '/index/index.html'));
+  res.sendFile(path.join(__dirname, '/index/'));
 });
 app.use('/', router);
 
