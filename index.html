@@ -1,35 +1,12 @@
-<title>DHS Fun</title>
-  <link rel="icon" type="image/x-icon" href="https://www.dentonisd.org/cms/lib/TX21000245/Centricity/Domain/401/DHS_Circle_2016_rgb.png"></link>
-<a class="weatherwidget-io" href="https://forecast7.com/en/33d21n97d13/denton/?unit=us" data-label_1="DENTON" data-label_2="WEATHER" data-icons="Climacons Animated" data-days="3" data-theme="weather_one" >DENTON WEATHER</a>
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
-<style>
-a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:visited {
-  color: white;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:hover {
-  color: lightblue;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
-  color: white;
-  background-color: transparent;
-  text-decoration: underline;
-}
-</style>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DHS Fun</title>
-  <link rel="icon" type="image/x-icon" href="https://www.dentonisd.org/cms/lib/TX21000245/Centricity/Domain/401/DHS_Circle_2016_rgb.png"/>
+  <link rel="icon" type="image/x-icon" href="https://www.dentonisd.org/cms/lib/TX21000245/Centricity/Domain/401/DHS_Circle_2016_rgb.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
   <script>
     window.OneSignalDeferred = window.OneSignalDeferred || [];
     OneSignalDeferred.push(function(OneSignal) {
@@ -37,22 +14,71 @@ a:active {
         appId: "0194098f-dfe5-4564-90a8-228ed381f633",
       });
     });
-  </script>  
+  </script>
+  <script>
+    (function(d, s, id) {
+      if (d.getElementById(id)) {
+          if (window.__TOMORROW__) {
+              window.__TOMORROW__.renderWidget();
+          }
+          return;
+      }
+      const fjs = d.getElementsByTagName(s)[0];
+      const js = d.createElement(s);
+      js.id = id;
+      js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, 'script', 'tomorrow-sdk');
+  </script>
+  <style>
+    .game-links-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .game-link {
+      margin-left: 20px;
+    }
+    #welcome-text {
+      margin-bottom: 10px; /* Adjusted margin */
+    }
+  </style>
 </head>
-<body bgcolor=#636363></body>
-<style>
-* {
-  text-align: center;
-}</style>
-<div align=right><a href="/404.html"></a></div>
-<div style="color:white; margin-top:20px" align=right>Made By Kalvin Owens</div>
-<div style="color:white"><h1><center>Welcome to Denton High's Fun Site</center></h1></div>
-  <div style="color:white" align=center><font size=5>Made by a Student, for Students</font></div>
-<div style="color:white"><font size= 3><marquee scrollamount=5>Chatlet was removed due to the website being down at the moment, if the website comes back online, it will be put back. Peardeck was also removed due to the schools usage of it being low.<div class='onesignal-customlink-container'></div></marquee></font></div>
-<div style="color: yellow;">This website is still a <b>work in progress.</b></div>
-<a href="https://js-dos.com/games/doom.exe.html" target="_blank"><img style="margin-left:20px;" height="50" src="https://icons.iconarchive.com/icons/3xhumed/mega-games-pack-26/256/Doom-1-icon.png">Doom I</img></a>
-<a href="https://js-dos.com/games/doom2.exe.html" target="_blank"><img style="margin-left:20px;" height="50" src="https://icons.iconarchive.com/icons/3xhumed/mega-games-pack-26/256/Doom-II-2-icon.png">Doom II</img></a>
-<a href="https://js-dos.com/games/wolf3d.exe.html" target="_blank"><img style="margin-left:20px;" height="50" src="https://www.techspot.com/images2/downloads/topdownload/2016/12/wolfenstein_3d__1992____icon_by_blagoicons-da47090.png">Wolfenstein 3D</img></a>
+<body style="background-color: #636363;">
+  <div class="tomorrow"
+     data-location-id="115247"
+     data-language="EN"
+     data-unit-system="IMPERIAL"
+     data-skin="dark"
+     data-widget-type="aqiPollen"
+     style="padding-bottom:22px;position:relative;"
+  >
+    <a
+      href="https://www.tomorrow.io/weather-api/"
+      rel="nofollow noopener noreferrer"
+      target="_blank"
+      style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;"
+    >
+      <img
+        alt="Powered by the Tomorrow.io Weather API"
+        src="https://weather-website-client.tomorrow.io/img/powered-by.svg"
+        width="250"
+        height="18"
+      />
+    </a>
+  </div>
+  <div align="right"><a href="/404.html"></a></div>
+  <div id="welcome-text" style="color: white;"><h1><center>Welcome to Denton High's Fun Site</center></h1></div>
+  <div style="color: white;" align="center"><font size="5">Made by a Student, for Students</font></div>
+  <div style="color: white; margin-top: 20px;" align="center">Made By Kalvin Owens</div>
+  <div style="color: white;"><font size="3"><marquee scrollamount="5">Chatlet was removed due to the website being down at the moment, if the website comes back online, it will be put back. Peardeck was also removed due to the schools usage of it being low.</marquee></font></div>
+  <div style="color: yellow; text-align: center;">This website is still a <b>work in progress.</b></div>
+  <div class="game-links-container">
+    <a class="game-link" href="https://js-dos.com/games/doom.exe.html" target="_blank"><img height="50" src="https://icons.iconarchive.com/icons/3xhumed/mega-games-pack-26/256/Doom-1-icon.png" alt="Doom I"></a>
+    <a class="game-link" href="https://js-dos.com/games/doom2.exe.html" target="_blank"><img height="50" src="https://icons.iconarchive.com/icons/3xhumed/mega-games-pack-26/256/Doom-II-2-icon.png" alt="Doom II"></a>
+    <a class="game-link" href="https://js-dos.com/games/wolf3d.exe.html" target="_blank"><img height="50" src="https://www.techspot.com/images2/downloads/topdownload/2016/12/wolfenstein_3d__1992____icon_by_blagoicons-da47090.png" alt="Wolfenstein 3D"></a>
+  </div>
 </body>
-<h1></h1>
-<p> </p>
+</html>
