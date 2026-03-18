@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #2e2e2e;
+  color: white;
+  text-align: center;
+}
+
+/* Header */
+header {
+  padding: 30px 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.author {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+/* Announcement */
+.announcement {
+  background: #444;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+/* Status */
+.status {
+  color: yellow;
+  margin-bottom: 20px;
+}
+
+/* Games */
+.games {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.games a {
+  text-decoration: none;
+  color: white;
+  background: #3a3a3a;
+  padding: 15px;
+  border-radius: 15px;
+  width: 120px;
+  transition: 0.3s;
+}
+
+.games img {
+  width: 60px;
+  height: 60px;
+}
+
+.games a:hover {
+  transform: scale(1.1);
+  background: #555;
+}
+
+/* Form button */
+.form a {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 20px;
+  background: #007bff;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.form a:hover {
+  background: #0056b3;
+}
