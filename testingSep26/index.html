@@ -19,22 +19,6 @@
       });
     });
   </script>
-  <script>
-    (function(d, s, id) {
-      if (d.getElementById(id)) {
-          if (window.__TOMORROW__) {
-              window.__TOMORROW__.renderWidget();
-          }
-          return;
-      }
-      const fjs = d.getElementsByTagName(s)[0];
-      const js = d.createElement(s);
-      js.id = id;
-      js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
-
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, 'script', 'tomorrow-sdk');
-  </script>
   
   <style>
     /* DHS Color Palette & Modern Styling */
@@ -97,7 +81,7 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
 
-    /* Modern Scrolling Text (Replaces <marquee>) */
+    /* Modern Scrolling Text */
     .marquee-container {
       width: 90%;
       max-width: 800px;
@@ -193,30 +177,45 @@
       box-shadow: 0 6px 20px rgba(242, 169, 0, 0.3);
     }
 
-    /* Widget container */
+    /* Weather Widget container */
     .widget-container {
-      margin-top: 20px;
+      margin-top: 25px;
       width: 90%;
       max-width: 800px;
-      display: flex;
-      justify-content: center;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
   </style>
 </head>
 <body>
 
-  <!-- Tomorrow.io Weather Widget -->
-  <div class="widget-container">
-    <div class="tomorrow"
-       data-location-id="115247"
-       data-language="EN"
-       data-unit-system="IMPERIAL"
-       data-skin="dark"
-       data-widget-type="aqiPollen"
-       style="position:relative; width:100%;"
-    >
-    </div>
-  </div>
+  <!-- WeatherWidget.io Embed -->
+  <a class="weatherwidget-io" 
+   href="https://forecast7.com/en/33d2197d13/denton" 
+   data-label_1="DENTON" 
+   data-label_2="WEATHER" 
+   data-font="Poppins" 
+   data-icons="Climacons Animated" 
+   data-theme="pure" 
+   data-basecolor="rgba(75, 38, 130, 0.4)" 
+   data-accent="rgba(242, 169, 0, 0.2)" 
+   data-textcolor="#ffffff" 
+   data-highcolor="#f2a900" 
+   data-suncolor="#f2a900">
+   DENTON WEATHER
+</a>
+<script>
+  !function(d,s,id){
+    var js,fjs=d.getElementsByTagName(s)[0];
+    if(!d.getElementById(id)){
+      js=d.createElement(s);
+      js.id=id;
+      js.src='https://weatherwidget.io/js/widget.min.js';
+      fjs.parentNode.insertBefore(js,fjs);
+    }
+  }(document,'script','weatherwidget-io-js');
+</script>
 
   <header>
     <h1>Welcome to Denton High's Fun Site</h1>
